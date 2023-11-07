@@ -1,15 +1,13 @@
-// Import Required Files
 package org.firstinspires.ftc.teamcode;
-
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
 // Send Code And Operating Mode To Game Board
-@Autonomous(name = "backstageParkingFront", group = "24536 Code")
-public class backstageParkingFrontBlue extends LinearOpMode {
-
+@Autonomous(name = "Backstage Parking Front Blue", group = "24536 Code")
+public class backstageParkingFrontBlue extends LinearOpMode
+{
     // Define All Motors
     DcMotor frontLeft = null;
     DcMotor frontRight = null;
@@ -17,8 +15,8 @@ public class backstageParkingFrontBlue extends LinearOpMode {
     DcMotor backRight = null;
 
     @Override
-    public void runOpMode() throws InterruptedException {
-
+    public void runOpMode() throws InterruptedException
+    {
         // Hardware Map All Motors
         DcMotor frontLeft = hardwareMap.dcMotor.get("Left_Top");
         DcMotor frontRight = hardwareMap.dcMotor.get("Right_Top");
@@ -41,8 +39,8 @@ public class backstageParkingFrontBlue extends LinearOpMode {
         // Only Start Code And Movement When Start Button Is Pressed
         waitForStart();
 
-        while (opModeIsActive()) {
-
+        while (opModeIsActive())
+        {
             // Move Robot To Right
             frontLeft.setPower(speedFactor);
             backLeft.setPower(-speedFactor);
